@@ -43,8 +43,15 @@ public class P2KMPAlgorithm {
     }
 
     /**
-     * 生成next数组，即部分匹配值表
+     * 生成目标字符串的next数组，即部分匹配值表
      * 注：部分匹配值 = 前缀和后缀的最长共有元素的长度
+     * 例如：A -> 0
+     *      AB -> 0
+     *      ABC -> 0
+     *      ABCD -> 0
+     *      ABCDA -> 1
+     *      ABCDAB -> 2
+     *      ABCDABD -> 0
      *
      * @param target
      * @return
@@ -54,6 +61,7 @@ public class P2KMPAlgorithm {
         for (int i = 1, j = 0; i < target.length(); i++) {
             // 遍历时，如果一直没有元素和第一个元素相等时，此while一直不会进入
             while (j > 0 && target.charAt(j) != target.charAt(i)) {
+                // 最重要的一个公式！！！
                 j = next[j - 1];
             }
             if (target.charAt(j) == target.charAt(i)) {
