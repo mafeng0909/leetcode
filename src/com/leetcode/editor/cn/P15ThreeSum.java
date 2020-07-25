@@ -37,9 +37,9 @@ public class P15ThreeSum{
         public List<List<Integer>> threeSum(int[] nums) {
             List<List<Integer>> result = new ArrayList<>();
             Arrays.sort(nums);
-            for (int i = 0; i < nums.length; i++) {
+            for (int i = 0; i < nums.length - 2; i++) {
                 // 确保第一个元素不重复
-                if (i > 0 && nums[i] == nums[i - 1]) {
+                if (i > 0 && nums[i] == nums[i - 1] && nums[i] > 0) {
                     continue;
                 }
                 twoSum(nums, i, result);
@@ -49,24 +49,26 @@ public class P15ThreeSum{
 
         /**
          * 两数之和
+         *
          * @param nums
-         * @param target
+         * @param first
          * @param result
          */
         public static void twoSum(int[] nums, int first, List<List<Integer>> result) {
             Set<List<Integer>> set = new HashSet<>();
             int target = nums[first];
-            int i = 0;
+            int i = first + 1;
             int j = nums.length - 1;
             while (i < j) {
+                int sum = nums[i] + nums[j];
                 // 保证 i 和 j 与第一个元素不重复被选择
-                if (j == first || nums[i] + nums[j] > target) {
+                if (sum + target > 0) {
                     j--;
-                }else if (i == first || nums[i] + nums[j] < target) {
+                }else if (sum + target < 0) {
                     i++;
-                }else if (nums[i] + nums[j] == target){
+                }else if (sum + target == 0){
                     List<Integer> list = new ArrayList<>();
-                    list.add(-target);
+                    list.add(target);
                     list.add(nums[i]);
                     list.add(nums[j]);
                     set.add(list);

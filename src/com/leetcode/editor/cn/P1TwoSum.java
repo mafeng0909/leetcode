@@ -19,6 +19,8 @@ import java.util.HashMap;
 
 /**
  * Java：两数之和
+ * 分析：此题不能用双指针，因为此题没说数组是有序的，并且返回的是索引位置
+ *
  * @author mafeng
  */
 public class P1TwoSum{

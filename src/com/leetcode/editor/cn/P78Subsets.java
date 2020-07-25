@@ -49,6 +49,14 @@ public class P78Subsets{
             return result;
         }
 
+        /**
+         * 递归
+         *
+         * @param nums
+         * @param index
+         * @param item
+         * @param result
+         */
         public void listAll(int[] nums, int index, List<Integer> item, List<List<Integer>> result) {
             // 边界条件
             if (index == nums.length) {
@@ -64,6 +72,14 @@ public class P78Subsets{
             }
         }
 
+        /**
+         * dfs 递归 + 回溯
+         *
+         * @param nums
+         * @param index
+         * @param item
+         * @param result
+         */
         public void listAll2(int[] nums, int index, List<Integer> item, List<List<Integer>> result) {
             // 边界条件
             if (index == nums.length) {
@@ -88,7 +104,7 @@ public class P78Subsets{
                 // 产生的各子集集合
                 List<Integer> item = new ArrayList<>();
                 for (int j = 0; j < nums.length; j++) {
-                    // 检测当前种类每种数字出现的次数
+                    // 检测当前种类中，每种数字是否别选中，选中则加入到item中
                     int num = i & (1 << j);
                     if (num != 0) {
                         item.add(nums[j]);
