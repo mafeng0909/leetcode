@@ -43,6 +43,9 @@ package com.leetcode.editor.cn;
 /**
  * Java：买卖股票的最佳时机 II
  * 分析：由于可以无数次买入，但是每次买入之前需要将手中的股票卖掉
+ *      1 只要有赚就可以买进。即将所有递增的加起来
+ *      2 公式法
+ *      注：每次买卖都要有成本
  *      buy = max(buy, sell - price[i])
  *      sell = max(sell, buy + prices[i])
  *      临界状态：buy = -price[i]
@@ -64,6 +67,7 @@ public class P122BestTimeToBuyAndSellStockIi{
             }
             int sell = 0;
             for (int i = 1; i < prices.length; i++) {
+                // 只要有赚就可以买
                 if (prices[i] > prices[i - 1]) {
                     sell += prices[i] - prices[i - 1];
                 }
@@ -78,7 +82,8 @@ public class P122BestTimeToBuyAndSellStockIi{
             int buy = -prices[0];
             int sell = 0;
             for (int i = 1; i < prices.length; i++) {
-                buy = Math.max(buy, sell - prices[i]);
+                // 每次买卖都要有成本
+                buy = Math.max(buy, sell - prices[i - 1]);
                 sell = Math.max(sell, prices[i] + buy);
             }
             return sell;

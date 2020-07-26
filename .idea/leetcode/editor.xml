@@ -379,6 +379,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/com/leetcode/editor/cn/P343IntegerBreak.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/com/leetcode/editor/cn/P343IntegerBreak.java" />
+              <option name="questionId" value="343" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/com/leetcode/editor/cn/P34FindFirstAndLastPositionOfElementInSortedArray.java">
           <value>
             <LeetcodeEditor>

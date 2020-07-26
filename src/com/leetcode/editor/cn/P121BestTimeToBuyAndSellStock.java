@@ -66,7 +66,7 @@ public class P121BestTimeToBuyAndSellStock{
             int buy = -prices[0];
             int sell = 0;
             for (int i = 1; i < prices.length; i++) {
-                buy = Math.max(buy, -prices[i]);
+                buy = Math.max(buy, -prices[i - 1]);
                 sell = Math.max(sell, prices[i] + buy);
             }
             return sell;
