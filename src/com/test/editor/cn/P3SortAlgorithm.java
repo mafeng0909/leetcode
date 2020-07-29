@@ -67,7 +67,7 @@ public class P3SortAlgorithm {
      */
     public static void heapSort(int[] arr) {
         int len = arr.length;
-        // 将无序的数组构建成一个堆
+        // 将无序的数组构建成一个堆，从下往上进行构造及调整（第一轮）
         for (int i = len / 2 - 1; i >= 0; i--) {
             adjustHeap(arr, i, len);
         }
@@ -75,11 +75,11 @@ public class P3SortAlgorithm {
         int temp = 0;
         // 构建完之后进行调整
         for (int j = len - 1; j >= 0; j--) {
-            // 交换首尾位置
+            // 交换首尾位置，即将最大的数放置最后一个位
             temp = arr[0];
             arr[0] = arr[j];
             arr[j] = temp;
-            // 继续调整
+            // 继续调整，即调整[0,j]索引范围
             adjustHeap(arr, 0, j);
         }
     }
@@ -93,14 +93,16 @@ public class P3SortAlgorithm {
     public static void adjustHeap(int[] arr, int i, int len) {
         int temp = arr[i];
         // 因为堆是一种完全二叉树，所以i的左子节点为2 * i + 1
-        for (int k = 2 * i + 1; k < len; k = k * 2 + 1) {
+        // 挑出左子节点，当前节点，右子节点中最大的一个节点，并将其放置到当前节点
+        for (int k = 2 * i + 1; k < len; k = 2 * k + 1) {
             // 右子节点的值 > 左子节点的值
             if (k + 1 < len && arr[k] < arr[k + 1]) {
                 k = k + 1;
             }
+            // 当前节点的值 < 子节点的值
             if (arr[i] < arr[k]) {
                 arr[i] = arr[k];
-                // 更新i
+                // 更新i，记录需要交换的节点位置
                 i = k;
             }else {
                 break;
