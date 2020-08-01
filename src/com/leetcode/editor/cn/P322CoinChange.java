@@ -31,7 +31,7 @@ import java.util.Arrays;
  *                     子问题 为 金额1、金额2、... 、金额i的最优解
  *     2、状态：dp[i] 表示 金额 i 至少需要多少张零钱可以凑齐（最优解）
  *     3、临界状态：dp[0] = 0
- *     4、状态转换方程：dp[i] = min(dp[i - coins[0]], dp[i - coins[1]], ... , dp[i - coins[coins.length - 1]]) + 1
+ *     4、状态转换方程：dp[i] = min(dp[i], dp[i - coins[j]] + 1)
  *
  * @author mafeng
  */

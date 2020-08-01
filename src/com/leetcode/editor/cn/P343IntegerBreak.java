@@ -61,7 +61,9 @@ public class P343IntegerBreak{
             }
             int[] dp = new int[n + 1];
             dp[1] = 1;
+            // 索引
             for (int i = 2; i <= n; i++) {
+                // 遍历查找最大的那一种
                 for (int j = 1; j < i; j++) {
                     dp[i] = Math.max(dp[i], Math.max(dp[i - j], i - j) * j);
                 }

@@ -83,6 +83,14 @@ public class P236LowestCommonAncestorOfABinaryTree{
      * }
      */
     static class Solution {
+        /**
+         * 第一种方法：分开dfs求出路径
+         *
+         * @param root
+         * @param p
+         * @param q
+         * @return
+         */
         public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
             List<TreeNode> resultP = new ArrayList<>();
             List<TreeNode> resultQ = new ArrayList<>();
@@ -139,7 +147,14 @@ public class P236LowestCommonAncestorOfABinaryTree{
             path.remove(path.size() - 1);
         }
 
-
+        /**
+         * 第二种方法：两个节点一起dfs求出路径
+         *
+         * @param root
+         * @param p
+         * @param q
+         * @return
+         */
         public TreeNode lowestCommonAncestor1(TreeNode root, TreeNode p, TreeNode q) {
             List<TreeNode> resultP = new ArrayList<>();
             List<TreeNode> resultQ = new ArrayList<>();
@@ -193,6 +208,33 @@ public class P236LowestCommonAncestorOfABinaryTree{
 
             // 回溯
             path.remove(path.size() - 1);
+        }
+
+        /**
+         * 第三种：分治算法
+         *
+         * @param root
+         * @param p
+         * @param q
+         * @return
+         */
+        public TreeNode lowestCommonAncestor3(TreeNode root, TreeNode p, TreeNode q) {
+            if (root == null || root == p || root == q) {
+                return root;
+            }
+            TreeNode left = lowestCommonAncestor3(root.left, p, q);
+            TreeNode right = lowestCommonAncestor3(root.right, p, q);
+            // 如果两边都找到了值，则说明两个节点分布在两边，最近公共祖先为根节点
+            if (left != null && right != null) {
+                return root;
+                // 如果只有左边有值，说明两个节点都在左边，最近公共祖先为left节点
+            }else if (left != null) {
+                return left;
+                // 如果只有右边有值，说明两个节点都在右边，最近公共祖先为right节点
+            }else if (right != null) {
+                return right;
+            }
+            return null;
         }
     }
     //leetcode submit region end(Prohibit modification and deletion)
