@@ -49,13 +49,17 @@ public class P92ReverseLinkedListIi {
             ListNode newHead = null;
             // 使用头插法
             while (head != null && len > 0) {
+                // 记住当前节点后一个节点
                 ListNode next = head.next;
+                // 下面两步是进行头插法
                 head.next = newHead;
                 newHead = head;
+                // 更新当前节点
                 head = next;
                 len--;
             }
             // 将交换部分的‘后置部分’链表和交换后的部分连接起来
+            assert modifyListTail != null;
             modifyListTail.next = head;
             // 将交换部分的‘前置部分’链表和交换后的部分连接起来
             if (preHead != null) {

@@ -24,27 +24,55 @@ import java.util.*;
 
 /**
  * Java：三数之和
+ *
  * @author mafeng
  */
-public class P15ThreeSum{
+public class P15ThreeSum {
     public static void main(String[] args) {
         Solution solution = new Solution();
         // TO TEST
+        int[] nums = {-1, 0, 1, 2, -1, -4};
+        List<List<Integer>> lists = solution.threeSum(nums);
+        for (List<Integer> list : lists) {
+            System.out.println(list);
+        }
     }
     //leetcode submit region begin(Prohibit modification and deletion)
 
     static class Solution {
         public List<List<Integer>> threeSum(int[] nums) {
-            List<List<Integer>> result = new ArrayList<>();
+            Set<List<Integer>> set = new HashSet<>();
             Arrays.sort(nums);
             for (int i = 0; i < nums.length - 2; i++) {
                 // 确保第一个元素不重复
-                if (i > 0 && nums[i] == nums[i - 1] && nums[i] > 0) {
+//                if (i > 0 && nums[i] == nums[i - 1] && nums[i] > 0) {
+//                    continue;
+//                }
+                int target = nums[i];
+                int left = i + 1;
+                int right = nums.length - 1;
+                if (nums[i] + nums[left] + nums[left + 1] > 0 || nums[i] + nums[right] + nums[right - 1] < 0) {
                     continue;
                 }
-                twoSum(nums, i, result);
+                while (left < right) {
+                    int sum = nums[left] + nums[right];
+                    // 保证 i 和 j 与第一个元素不重复被选择
+                    if (sum + target > 0) {
+                        right--;
+                    } else if (sum + target < 0) {
+                        left++;
+                    } else if (sum + target == 0) {
+                        List<Integer> list = new ArrayList<>();
+                        list.add(target);
+                        list.add(nums[left]);
+                        list.add(nums[right]);
+                        set.add(new ArrayList<>(list));
+                        left++;
+                        right--;
+                    }
+                }
             }
-            return result;
+            return new ArrayList<>(set);
         }
 
         /**
@@ -64,9 +92,9 @@ public class P15ThreeSum{
                 // 保证 i 和 j 与第一个元素不重复被选择
                 if (sum + target > 0) {
                     j--;
-                }else if (sum + target < 0) {
+                } else if (sum + target < 0) {
                     i++;
-                }else if (sum + target == 0){
+                } else if (sum + target == 0) {
                     List<Integer> list = new ArrayList<>();
                     list.add(target);
                     list.add(nums[i]);
