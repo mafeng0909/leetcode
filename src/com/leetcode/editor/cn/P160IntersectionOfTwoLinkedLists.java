@@ -58,6 +58,7 @@
 // Related Topics 链表
 
 package com.leetcode.editor.cn;
+
 /**
  * Java：相交链表
  * 方法一：使用set
@@ -65,6 +66,8 @@ package com.leetcode.editor.cn;
  *        依次查找set集合中是否存在该节点，当找到的第一个就是相交的第一个节点
  * 方法二：先计算两个链表的长度，将长度长的链表头指针移动到和短链表一样的长度
  *        然后再同时遍历两个链表，第一个相等的就是相交的第一个节点
+ * 方法三：定义两个指针，分别遍历两个链表，当遍历到最后一个节点的时候，
+ *        将该节点指向另一个链表的头节点，然后继续遍历，相等则为交点
  *
  * @author mafeng
  */
@@ -74,6 +77,7 @@ public class P160IntersectionOfTwoLinkedLists{
         // TO TEST
     }
     //leetcode submit region begin(Prohibit modification and deletion)
+
     /**
      * Definition for singly-linked list.
      * public class ListNode {
@@ -86,6 +90,13 @@ public class P160IntersectionOfTwoLinkedLists{
      * }
      */
     static class Solution {
+        /**
+         * 方法二
+         *
+         * @param headA
+         * @param headB
+         * @return
+         */
         public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
             int lenA = getLength(headA);
             int lenB = getLength(headB);
@@ -130,6 +141,27 @@ public class P160IntersectionOfTwoLinkedLists{
                 n--;
             }
             return headA;
+        }
+
+        /**
+         * 方法三
+         * 此方法不适合判断无交点情况
+         *
+         * @param headA
+         * @param headB
+         * @return
+         */
+        public ListNode getIntersectionNode2(ListNode headA, ListNode headB) {
+            if (headA == null || headB == null) {
+                return null;
+            }
+            ListNode pA = headA;
+            ListNode pB = headB;
+            while (pA != pB) {
+                pA = pA.next == null ? headB : pA.next;
+                pB = pB.next == null ? headA : pB.next;
+            }
+            return pA;
         }
     }
     //leetcode submit region end(Prohibit modification and deletion)

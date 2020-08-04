@@ -1,8 +1,10 @@
 package com.test.editor.cn;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @author mafeng
@@ -28,5 +30,9 @@ public class Test3 {
         System.out.println(num);
         System.out.println(list);
         System.out.println(target);
+
+        List<Integer> list1 = Collections.synchronizedList(new ArrayList<>());
+
+        CopyOnWriteArrayList<Integer> list2 = new CopyOnWriteArrayList<>();
     }
 }
