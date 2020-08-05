@@ -1,9 +1,6 @@
 package com.test.editor.cn;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
@@ -34,5 +31,7 @@ public class Test3 {
         List<Integer> list1 = Collections.synchronizedList(new ArrayList<>());
 
         CopyOnWriteArrayList<Integer> list2 = new CopyOnWriteArrayList<>();
+
+        WeakHashMap map = new WeakHashMap<Integer, Integer>();
     }
 }
