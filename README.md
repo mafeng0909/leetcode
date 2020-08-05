@@ -4,3 +4,8 @@
 
 ## leetcode题目
 [1、两数之和](./src/com/leetcode/editor/cn/P1TwoSum.java)
+[2、两数相加](./src/com/leetcode/editor/cn/P2AddTwoNumbers.java)
+[3、无重复字符的最长子串](./src/com/leetcode/editor/cn/P3LongestSubstringWithoutRepeatingCharacters.java)
+[4、寻找两个正序数组的中位数](./src/com/leetcode/editor/cn/P4MedianOfTwoSortedArrays.java)
+[5、最长回文子串](./src/com/leetcode/editor/cn/P5LongestPalindromicSubstring.java)
+[8、字符串转换整数](./src/com/leetcode/editor/cn/P8StringToIntegerAtoi.java)
