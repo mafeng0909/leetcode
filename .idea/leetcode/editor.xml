@@ -603,6 +603,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/com/leetcode/editor/cn/P42TrappingRainWater.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/com/leetcode/editor/cn/P42TrappingRainWater.java" />
+              <option name="questionId" value="42" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/com/leetcode/editor/cn/P449SerializeAndDeserializeBst.java">
           <value>
             <LeetcodeEditor>

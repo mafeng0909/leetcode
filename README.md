@@ -9,3 +9,8 @@
 [4、寻找两个正序数组的中位数](./src/com/leetcode/editor/cn/P4MedianOfTwoSortedArrays.java)  
 [5、最长回文子串](./src/com/leetcode/editor/cn/P5LongestPalindromicSubstring.java)  
 [8、字符串转换整数](./src/com/leetcode/editor/cn/P8StringToIntegerAtoi.java)  
+[10、正则表达式匹配](./src/com/leetcode/editor/cn/P10RegularExpressionMatching.java)  
+[11、盛最多水的容器](./src/com/leetcode/editor/cn/P11ContainerWithMostWater.java)  
+[14、最长公共前缀](./src/com/leetcode/editor/cn/P14LongestCommonPrefix.java)  
+[15、三数之和](./src/com/leetcode/editor/cn/P15ThreeSum.java)  
+[42、接雨水](./src/com/leetcode/editor/cn/P42TrappingRainWater.java)    
