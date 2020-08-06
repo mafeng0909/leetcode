@@ -14,3 +14,11 @@
 [14、最长公共前缀](./src/com/leetcode/editor/cn/P14LongestCommonPrefix.java)  
 [15、三数之和](./src/com/leetcode/editor/cn/P15ThreeSum.java)  
 [42、接雨水](./src/com/leetcode/editor/cn/P42TrappingRainWater.java)    
+
+
+## 牛客网公司真题
+### 网易
+
+[1、班级某人成绩的排名](./src/com/niuke/editor/cn/netease/Test1.java)  
+[2、小易的升级之路](./src/com/niuke/editor/cn/netease/Test2.java)  
+[3、路灯](./src/com/niuke/editor/cn/netease/Test3.java)  

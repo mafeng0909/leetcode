@@ -16,6 +16,12 @@
 package com.leetcode.editor.cn;
 /**
  * Java：接雨水
+ * 分析：双指针
+ *      分别记录下左边和右边的遍历时的最大值（maxLeft，maxRight）
+ *      当height[left] < height[right]情况下，如果maxLeft > height[left], 便可以积水
+ *                                           否则，更新maxLeft
+ *      当height[left] >= height[right]情况下，如果maxRight > height[right], 便可以积水
+ *                                           否则，更新maxRight
  * 
  * @author: mafeng
  * @data: 2020-08-05 23:54:09
