@@ -22,3 +22,4 @@
 [1、班级某人成绩的排名](./src/com/niuke/editor/cn/netease/Test1.java)  
 [2、小易的升级之路](./src/com/niuke/editor/cn/netease/Test2.java)  
 [3、路灯](./src/com/niuke/editor/cn/netease/Test3.java)  
+[5、地牢逃脱](./src/com/niuke/editor/cn/netease/Test5.java)  
