@@ -104,7 +104,7 @@ public class P78Subsets{
                 // 产生的各子集集合
                 List<Integer> item = new ArrayList<>();
                 for (int j = 0; j < nums.length; j++) {
-                    // 检测当前种类中，每种数字是否别选中，选中则加入到item中
+                    // 检测当前种类中，每种数字是否被选中，选中则加入到item中
                     int num = i & (1 << j);
                     if (num != 0) {
                         item.add(nums[j]);

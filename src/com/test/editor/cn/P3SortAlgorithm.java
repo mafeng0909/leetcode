@@ -101,7 +101,7 @@ public class P3SortAlgorithm {
                 k = k + 1;
             }
             // 当前节点的值 < 子节点的值
-            if (arr[i] < arr[k]) {
+            if (temp < arr[k]) {
                 arr[i] = arr[k];
                 // 更新i，记录需要交换的节点位置
                 i = k;
