@@ -39,6 +39,8 @@ public class P402RemoveKDigits{
     public static void main(String[] args) {
         Solution solution = new Solution();
         // TO TEST
+        String num = "71245323308";
+        System.out.println(solution.removeKdigits(num, 4));
     }
     //leetcode submit region begin(Prohibit modification and deletion)
 
@@ -75,6 +77,7 @@ public class P402RemoveKDigits{
                 flag = false;
                 stringBuilder.append(integer);
             }
+            // 如果
             if (stringBuilder.length() == 0) {
                 return "0";
             }
