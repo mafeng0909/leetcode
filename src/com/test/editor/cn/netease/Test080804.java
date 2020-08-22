@@ -1,6 +1,7 @@
 package com.test.editor.cn.netease;
 
 
+import java.util.function.Function;
 
 /**
  * @author mafeng
@@ -8,12 +9,9 @@ package com.test.editor.cn.netease;
  **/
 public class Test080804 {
     public static void main(String[] args) {
-        String str = "mafeng";
-        String str1 = "mafeng";
-        String str3 = new String("mafeng");
-        System.out.println(str.equals(str1));
-        System.out.println(str == str1);
-        System.out.println(str.equals(str3));
-        System.out.println(str == str3);
+        Function<Double, Function<Double, Double>> addTax = taxRate -> price -> price + price * taxRate;
+        Function<Double, Double> tc9 = addTax.apply(0.09);
+        Double price = tc9.apply(500d);
+        System.out.println(price);
     }
 }

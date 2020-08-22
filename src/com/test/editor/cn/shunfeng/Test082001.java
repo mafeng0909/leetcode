@@ -49,7 +49,7 @@ public class Test082001 {
             dp[i] = dp[i - 1];
             for (int j = 0; j < n; j++) {
                 if (pairs[j].end == i) {
-                    dp[i] = Math.max(dp[i], dp[i - pairs[j].end + pairs[j].start] + pairs[j].value);
+                    dp[i] = Math.max(dp[i], dp[pairs[j].start] + pairs[j].value);
                 }
             }
         }
