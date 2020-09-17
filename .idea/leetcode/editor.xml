@@ -299,6 +299,22 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/com/leetcode/editor/cn/P189RotateArray.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/com/leetcode/editor/cn/P189RotateArray.java" />
+              <option name="questionId" value="189" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/leetcode/editor/cn/P190ReverseBits.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/com/leetcode/editor/cn/P190ReverseBits.java" />
+              <option name="questionId" value="190" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/com/leetcode/editor/cn/P198HouseRobber.java">
           <value>
             <LeetcodeEditor>
@@ -536,6 +552,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/src/com/leetcode/editor/cn/P343IntegerBreak.java" />
               <option name="questionId" value="343" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/leetcode/editor/cn/P345ReverseVowelsOfAString.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/com/leetcode/editor/cn/P345ReverseVowelsOfAString.java" />
+              <option name="questionId" value="345" />
             </LeetcodeEditor>
           </value>
         </entry>

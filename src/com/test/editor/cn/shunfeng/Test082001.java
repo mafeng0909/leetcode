@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 /**
  * 题目：赏金猎人
+ *
  * 分析：需要考虑end相等的情况，代码没有考虑，之后会添加
  *
  * @author mafeng
