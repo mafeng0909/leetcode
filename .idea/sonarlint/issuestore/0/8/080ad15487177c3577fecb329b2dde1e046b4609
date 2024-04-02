@@ -1,0 +1,9 @@
+
+S
+java:S1854"8Remove this useless assignment to local variable "arr2".(Ð¡´Âüÿÿÿÿ
+D
+java:S1481")Remove this unused "arr2" local variable.(Ð¡´Âüÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(µ†ÞØ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(×•œ²
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(Õ¹ø•þÿÿÿÿ

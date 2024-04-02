@@ -1,0 +1,18 @@
+
+Q
+java:S1854"6Remove this useless assignment to local variable "t2".(‘ü·›ûÿÿÿÿ
+P	java:S125"<This block of commented-out lines of code should be removed.(Žý»L
+?
+java:S2440"$Remove this instantiation of "Test".(‘ü·›ûÿÿÿÿ
+B
+java:S1481"'Remove this unused "t2" local variable.(‘ü·›ûÿÿÿÿ
+S	java:S106!"9Replace this use of System.out or System.err by a logger.(ˆ€›¢ûÿÿÿÿ
+t
+java:S1171#"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
+S	java:S106$"9Replace this use of System.out or System.err by a logger.(ñ¡ŸÉøÿÿÿÿ
+;
+java:S1068	"%Remove this unused "a" private field.(ýÝÌØ
+i
+java:S1104"NMake t1 a static final constant or non-public and provide accessors if needed.(üïÝÑýÿÿÿÿ
+C
+java:S1444"(Make this "public static t1" field final(üïÝÑýÿÿÿÿ
