@@ -43,7 +43,6 @@ public class P300LongestIncreasingSubsequence{
         // TO TEST
     }
     //leetcode submit region begin(Prohibit modification and deletion)
-
     static class Solution {
         // 方法一
         public int lengthOfLIS(int[] nums) {

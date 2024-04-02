@@ -40,9 +40,9 @@ public class P70ClimbingStairs{
     public static void main(String[] args) {
         Solution solution = new Solution();
         // TO TEST
+        System.out.println(solution.climbStairs(10));
     }
     //leetcode submit region begin(Prohibit modification and deletion)
-
     static class Solution {
         public int climbStairs(int n) {
             /*// 1、回溯法 会超出时间限制
