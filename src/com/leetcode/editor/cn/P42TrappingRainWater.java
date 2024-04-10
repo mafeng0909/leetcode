@@ -37,27 +37,30 @@ public class P42TrappingRainWater{
         public int trap(int[] height) {
             int left = 0;
             int right = height.length - 1;
-            int res = 0;
             int maxLeft = 0;
             int maxRight = 0;
+
+            int result = 0;
             while (left < right) {
+                // 左边值比右边大
                 if (height[left] < height[right]) {
-                    if (maxLeft <= height[left]) {
-                        maxLeft = height[left];
+                    if (maxLeft > height[left]) {
+                        result += maxLeft - height[left];
                     } else {
-                        res += maxLeft - height[left];
+                        maxLeft = height[left];
                     }
                     left++;
                 } else {
-                    if (maxRight <= height[right]) {
-                        maxRight = height[right];
+                    if (maxRight > height[right]) {
+                        result += maxRight - height[right];
                     } else {
-                        res += maxRight - height[right];
+                        maxRight = height[right];
                     }
                     right--;
                 }
             }
-            return res;
+
+            return result;
         }
     }
     //leetcode submit region end(Prohibit modification and deletion)
